@@ -20,6 +20,9 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  /* Updates made */
+  display: flex;
+  padding: 16px;
 }
 
 .icon {
@@ -27,12 +30,27 @@ body {
   font-size: 26px;
   font-weight: 700;
   background: lavender;
-  width: 42px;
+  min-width: 42px; /* Update made: instead have used width property and flex-shrink:0 but in this use case 'min-width' is sufficient and simpler. */
+  margin-right: 16px; /* Update made */
   height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Update made */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text {
+  margin-bottom: 16px;
 }
 
 .close-button {
