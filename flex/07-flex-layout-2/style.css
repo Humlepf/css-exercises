@@ -5,13 +5,13 @@ body {
 }
 
 .header {
-  height: 72px;
+  /* removed height of 72px */
   background: darkmagenta;
   color: white;
 }
 
 .footer {
-  height: 72px;
+  /* removed height of 72px */
   background: #eee;
   color: darkmagenta;
 }
@@ -26,4 +26,67 @@ body {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+}
+
+/* Changes made */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.content-container {
+  display: flex;
+}
+
+.sidebar {
+  flex: 1 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 16px;
+  font-size: 24px;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: #eee;
+}
+
+.card-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 48px;
+  
+}
+
+.card {
+  height: 240px;
+  width: 240px;
+  padding: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
 }
